@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-yko69szej6hpsi4xk#hi^5zbb^s3nf%=$=k%3c$u#fe=lg3o)f
 DEBUG = True
 
 ALLOWED_HOSTS = []
+AUTH_USER_MODEL = 'tourapp.User'
 
 
 # Application definition
@@ -40,7 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'tourapp',
     'corsheaders',
-    'rest_framework_simplejwt',
+    'rest_framework_simplejwt.token_blacklist',
 ]
 
 MIDDLEWARE = [
@@ -54,6 +55,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework_simplejwt.authentication.JWTAuthentication',
+#     ),
+# }
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',  # React app running on port 3000
 ]

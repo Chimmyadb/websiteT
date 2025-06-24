@@ -32,16 +32,17 @@ input {
 button {
   width: 100%;
   padding: 10px;
-  background-color: #038407;
+  margin:  5px ;
+  background-color:  #3769b1;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-button:hover {
+/* button:hover {
   background-color: #45a049;
-}
+} */
 
 .error {
   color: red;
@@ -250,10 +251,10 @@ button:hover {
   border-radius: 4px;
 }
 
-.small-btn.add {
+/* .small-btn.add {
   background-color: #2ecc71;
   color: white;
-}
+} */
 
 .small-btn.edit {
   background-color: #3498db;
@@ -267,7 +268,7 @@ button:hover {
 
 .small-btn.add {
   width: 80px;
-  background-color: #2ecc71;
+  background-color: #008b3a;
   color: white;
 }
 
@@ -290,22 +291,22 @@ html, body {
     margin: 0;
     padding: 0;
 }
-.sidebar {
+.sidebars {
   width: 250px; /* fixed sidebar width */
   height: 100vh; /* full height */
-  background-color: #038407; /* your chosen sidebar color */
+  background-color: #006c9e; /* your chosen sidebar color */
   color: white;
   padding: 20px;
   box-sizing: border-box;
   overflow-y: auto;
 }
 
-.sidebar-header {
+.sidebar-headers {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.sidebar-header h2 {
+.sidebar-headers h2 {
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -344,10 +345,10 @@ html, body {
 }
 
 /* Sidebar styles (adjust as you like) */
-.sidebar {
+.sidebar{
   width: 250px; /* fixed width */
   height: 100vh;
-  background-color: #038407;
+  background-color: #3769b1;
   color: #fff;
   padding: 20px;
   box-sizing: border-box;

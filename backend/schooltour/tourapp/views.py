@@ -11,11 +11,15 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.contrib.auth.hashers import make_password
 from django.views.decorators.csrf import csrf_exempt
+from tourapp.token_serializers import CustomTokenObtainPairSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
+
 import logging
 
 
-# Create your views here.
-
+logger = logging.getLogger(__name__)
+class LoginView(TokenObtainPairView):
+    serializer_class = MyTokenObtainPairSerializer
 
 @api_view(['POST'])
 @csrf_exempt

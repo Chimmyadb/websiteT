@@ -4,8 +4,8 @@ import '../css/Login.css';
 
 const StaffSidebar = () => {
   return (
-    <div className="sidebar">
-      <div className="sidebar-header">
+    <div className="sidebars">
+      <div className="sidebar-headers">
         <h2>WELCOME TO STAFF DASHBOARD</h2>
       </div>
       <div className="menu">

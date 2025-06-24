@@ -3,7 +3,7 @@ import Swal from 'sweetalert2';
 import Footer from '../components/Footer';
 import '../css/Login.css';
 
-function StaffUsers() {
+function Parent() {
   const [parents, setParents] = useState([]);
   const [selectedParentIndex, setSelectedParentIndex] = useState(null);
   const [showParentModal, setShowParentModal] = useState(false);
@@ -202,4 +202,4 @@ function StaffUsers() {
   );
 }
 
-export default StaffUsers;
+export default Parent;

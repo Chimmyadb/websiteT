@@ -4,29 +4,24 @@ from django.contrib.auth.models import AbstractUser, Group, Permission
 # Create your models here.
 #User model
 class User(AbstractUser):
-   ROLE_CHOICES = [
+    ROLE_CHOICES = [
         ('staff', 'Staff'),
         ('parent', 'Parent'),
     ]
-    username = models.CharField(max_length=100, unique=True)
-    password = models.CharField(max_length=100)
-    user_type = models.CharField(max_length=10, choices=ROLE_CHOICES)
-    
-   
+    role = models.CharField(max_length=10, choices=ROLE_CHOICES)
     
     class Meta:
         db_table = 'user'
         
     def __str__(self):
-        return f"{self.username} ({self.user_type})"
-    
-         
+        return f"{self.username} - ({self.role})"
+
 class Parent(models.Model):
-    parent_id=models.AutoField(primary_key=True)
-    user=models.OneToOneField(User, on_delete=models.CASCADE)
-    name=models.CharField(max_length=20)
-    phone=models.IntegerField()
-    email=models.EmailField(max_length=100)
+    parent_id = models.AutoField(primary_key=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=20)
+    phone = models.IntegerField()
+    email = models.EmailField(max_length=100)
     
     class Meta:
         db_table = 'parent'

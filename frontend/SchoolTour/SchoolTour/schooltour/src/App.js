@@ -10,6 +10,7 @@ import Payment from "./pages/Payment";
 import StaffUsers from "./pages/StaffUsers";
 import StaffTour from "./pages/StaffTour";
 import StaffPayment from "./pages/StaffPayment"; // ✅ Import StaffPayment
+import DashboardStats from "./pages/DashboardStats";
 
 // Parent Dashboard Layout
 const DashboardLayout = ({ children }) => (
@@ -69,6 +70,14 @@ const App = () => {
         />
 
         {/* Staff Dashboard Routes */}
+         <Route
+          path="/staff"
+          element={
+            <StaffDashboardLayout>
+              <DashboardStats />
+            </StaffDashboardLayout>
+          }
+        />
         <Route
           path="/staff/users"
           element={

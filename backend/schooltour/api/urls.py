@@ -28,9 +28,7 @@ urlpatterns = [
     path('tours/', manage_tour, name='manage_tour'),
     path('tour/<int:pk>/', manage_tour, name='manage_tour_detail'),
     
-    path('notifications/', manage_notification, name='manage_notification'),
-    path('notification/<int:pk>/', manage_notification, name='manage_notification_detail'),
-    
+   
     path('staffs/', manage_staff, name='manage_staff'),
     path('staff/<int:pk>/', manage_staff, name='manage_staff_detail'),
     

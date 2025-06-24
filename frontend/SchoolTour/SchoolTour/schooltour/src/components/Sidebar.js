@@ -9,12 +9,13 @@ const Sidebar = () => {
         <h2>WELCOME TO PARENT DASHBOARD</h2>
       </div>
       <div className="menu">
-        <Link to="/student" className="item">
-          Student
-        </Link>
         <Link to="/parent" className="item">
           Parent
         </Link>
+        <Link to="/student" className="item">
+          Student
+        </Link>
+        
         <Link to="/tour" className="item">
           Tour
         </Link>
